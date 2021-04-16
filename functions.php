@@ -209,6 +209,6 @@ function custom_post_type() {
 		'taxonomies'            => array( 'category' ),
 		'public'                => true,
 	);
-	register_post_type( 'intro', $args );
+	register_post_type( 'hero', $args );
 }
 add_action( 'init', 'custom_post_type', 0 );

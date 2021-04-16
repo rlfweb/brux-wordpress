@@ -1,3 +1,7 @@
+#wpadminbar {
+  display: none;
+}
+
 @keyframes fadein {
   0% {
     opacity: 0;
