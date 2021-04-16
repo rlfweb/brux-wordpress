@@ -70,14 +70,6 @@
 			?>
 		</nav><!-- #site-navigation -->
 
-		<!-- SUPERHI START -->
-    <nav>
-      <a href="products.html">Products</a>
-      <a href="how-it-works.html">How it works</a>
-      <a href="results.html">Results</a>
-    </nav> 
-		<!-- SUPERHI END -->
-
 	</header><!-- #masthead -->
 
 	

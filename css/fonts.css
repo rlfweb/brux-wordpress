@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Rubik-Light";
+  src: url("/css/Rubik-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik-Medium";
+  src: url("/css/Rubik-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik-Black";
+  src: url("/css/Rubik-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.medium {
+  font-family: "Rubik-Medium", sans-serif;
+}
+
+.black {
+  font-family: "Rubik-Black", sans-serif;
+}
+
+.light {
+  font-family: "Rubik-Light", sans-serif;
+}
