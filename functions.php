@@ -145,11 +145,14 @@ function brux_scripts() {
 
 	wp_enqueue_script( 'brux-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	// RLF - load custom.css file using wp_enqueue_style
-	wp_enqueue_style( 'brux-custom', get_template_directory_uri() . '/css/custom.css');
-
+	// RLF - load fonts.css file using wp_enqueue_style
+	wp_enqueue_style( 'brux-fonts', get_template_directory_uri() . '/css/fonts.css');
+	
 	// RLF - load base.css file using wp_enqueue_style
 	wp_enqueue_style( 'brux-base', get_template_directory_uri() . '/css/base.css');
+
+	// RLF - load custom.css file using wp_enqueue_style
+	wp_enqueue_style( 'brux-custom', get_template_directory_uri() . '/css/custom.css');
 
 	// RLF - load animation.js with jquery too
 	wp_enqueue_script( 'brux-animation', get_template_directory_uri() . '/js/animation.js', array(), _S_VERSION, true );
@@ -193,3 +196,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// RLF - Register Custom Post Type for hero section
+function custom_post_type() {
+	$labels = array(
+		'name'                  => _x( 'Hero', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'Hero', 'Post Type Singular Name' ), 
+		'set_featured_image'    => __( 'Set featured image', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array( 'category' ),
+		'public'                => true,
+	);
+	register_post_type( 'intro', $args );
+}
+add_action( 'init', 'custom_post_type', 0 );
