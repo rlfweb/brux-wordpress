@@ -20,16 +20,11 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				brux_posted_on();
-				brux_posted_by();
-				?>
-			</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php brux_post_thumbnail(); ?>
+	<?php brux_post_thumbnail(); ?> 
 
 	<div class="entry-content">
 		<?php
@@ -48,12 +43,6 @@
 			)
 		);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brux' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
 	</div><!-- .entry-content -->
 
